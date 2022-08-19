@@ -862,6 +862,10 @@ a, button {
   opacity: 0;
   visibility: hidden; }
 
+.popup:target {
+  opacity: 1;
+  visibility: visible; }
+
 .popup_body {
   min-height: 100%;
   display: flex;
