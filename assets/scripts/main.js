@@ -118,7 +118,7 @@
         navigator.clipboard.writeText(ip)
             .then(() => {
                 console.log(` [!] Айпи ${ip} успешно скопирован!`)
-                itemHover.innerHTML = 'Айпи скопирован!';
+                itemHover.innerHTML = 'IP скопійовано';
                 itemHover.style.backgroundColor = "#4cb58f";
 
                 setTimeout(() => {
