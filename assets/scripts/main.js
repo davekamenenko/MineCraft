@@ -2,46 +2,6 @@
 
 
 
-// switch theme
-// {
-//     const body = document.querySelector('body');
-//     const img = document.querySelector('[theme] img');
-//     document.querySelector('[theme]').addEventListener('click', () => {
-//         // .classList.toggle('theme-dark');
-//         if(body.classList.contains('theme-dark')) {
-//             localStorage.setItem("theme", "light");
-//             body.classList.remove('theme-dark');
-//             img.setAttribute('src', './assets/images/icons/moon.svg');
-//         } else {
-//             localStorage.setItem("theme", "dark");
-//             body.classList.add('theme-dark');
-//             img.setAttribute('src', './assets/images/icons/sun.svg');
-//         }
-//     });
-//
-//     window.addEventListener('DOMContentLoaded', () => {
-//         if(localStorage.getItem('theme')) {
-//             if(localStorage.getItem('theme') == "dark") {
-//                 console.log(' [Темы] Включена тёмная тема!');
-//                 body.classList.add('theme-dark');
-//                 img.setAttribute('src', './assets/images/icons/sun.svg');
-//                 return;
-//             }
-//             console.log(' [Темы] Включена светлая тема!');
-//         } else {
-//             if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-//                 console.log(' [Темы] Включена тёмная тема с операционной системы!');
-//                 localStorage.setItem("theme", "dark");
-//                 body.classList.add('theme-dark');
-//                 img.setAttribute('src', './assets/images/icons/sun.svg');
-//                 return;
-//             }
-//             localStorage.setItem("theme", "light");
-//             console.log(' [Темы] Включена светлая тема с операционной системы!');
-//         }
-//     })
-// }
-
 // burger
 {
     const nav = document.querySelector('.nav');
@@ -51,7 +11,7 @@
         container.style.opacity = 0;
         setTimeout( () => {
             container.style.opacity = 1;
-        }, 1000);
+        }, 300);
         setTimeout( () => {
             nav.classList.toggle('active');
             document.body.classList.toggle('block');
@@ -322,8 +282,3 @@
 }
 
 
-$(document).ready(function () {
-    $('.test1').click(function (event) {
-        $('.test2').toggleClass('active');
-    })
-})

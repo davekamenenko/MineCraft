@@ -7,6 +7,7 @@
     <title>donate</title>
     <link rel="stylesheet" href="assets/styles/scss/main.css">
 
+
 </head>
 <body>
 <div class="wrapper">
@@ -97,7 +98,8 @@
                                     </button>
                                 </div>
                                 <div class="product__price">
-                                    <button modal-product="buy" class="donate__products-button donate__products-buy">
+                                    <button modal-product="buy" class="donate__products-button donate__products-buy"
+                                            id="trigger">
                                         Купить
                                     </button>
                                 </div>
@@ -215,7 +217,7 @@
                                     </button>
                                 </div>
                                 <div class="product__price">
-                                    <button modal-product="buy" class="donate__products-button donate__products-buy">
+                                    <button modal-product="buy" class="donate__products-button donate__products-buy ">
                                         Купить
                                     </button>
                                 </div>
@@ -453,103 +455,48 @@
     </footer>
 </div>
 
-<div modal-box class="modals">
-    <div modal-item="description" class="_container modals__item">
-        <p class="modals__title">Информация о товаре</p>
-        <div class="modals__text">Empty...</div>
-        <div modal-close class="modals__close">
-            <div class="modals__close-line"></div>
-            <div class="modals__close-line"></div>
-        </div>
-    </div>
 
-    <div modal-item="buy" class="_container modals__item">
-        <div class="modals__row">
-            <div class="modals__cart">
-                <div class="modals__product">
-                    <div class="modals__product-image">
-                        <img src="./assets/images/products/kolt.png">
+<!--<button id="trigger" class="trigger-button" type="button">Launch Modal</button>-->
+
+<div id="content">
+    <div class="popup_block">
+        <div class="_container">
+            <div class="left_side">
+                <div class="left_side_bg">
+                    <div class="popup_block_img">
+                        <img src="assets/images/king.jpeg" alt="">
                     </div>
-
-                    <div class="modals__product-info">
-                        <p class="modals__product-name">
-                            Кольт
-                        </p>
-
-                        <p class="modals__product-price">
-                            99P
-                        </p>
+                    <div class="popup_block_name">
+                        <p>Кольт</p>
+                    </div>
+                    <div class="popup_block_price">
+                        <p>2000 ₴</p>
                     </div>
                 </div>
-
-                <div class="modals__text">
-                    Нажимая на кнопку "Приобрести", Вы соглашаетесь с нашими <a href="#" class="textstyle__link">условиями
-                    оферта</a>.
+            </div>
+            <div class="right_side">
+                <div class="right_side_bg">
+                    <div class="nickname_block">
+                        <p>Введіть Ваш нікнейм</p>
+                    </div>
+                    <div class="popup_form">
+                        <form class="modals__form" action="index.html">
+                            <input class="modals__input" type="text" id="nickname" name="nickname" placeholder="Нікнейм">
+                            <button class="modals__button">Купити</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="modals__cart modals__cart-reverse">
-                <div class="modals__title">Покупка товара</div>
-
-                <form class="modals__form" action="index.html">
-                    <input class="modals__input" type="text" id="nickname" name="nickname" placeholder="Никнейм">
-                    <div class="modals__amount">
-                        <p class="modals__amount-text">Количество: </p>
-                        <div class="modals__amount-control">
-                            <div class="modals__amount-minus">-</div>
-
-                            <div class="modals__amount-result">1</div>
-
-                            <div class="modals__amount-plus">+</div>
-                        </div>
-                    </div>
-                    <div class="modals__payment">
-                        <div class="modals__payment-control">Способ оплаты: <span
-                                class="modals__payment-selected">QIWI</span></div>
-
-                        <div class="modals__payment-list">
-                            <div class="modals__payment-item">QIWI</div>
-                            <div class="modals__payment-item">Карта</div>
-                            <div class="modals__payment-item">Другое</div>
-                        </div>
-                    </div>
-
-                    <button class="modals__button">Приобрести</button>
-                </form>
-            </div>
         </div>
 
-        <div modal-close class="modals__close">
-            <div class="modals__close-line"></div>
-            <div class="modals__close-line"></div>
-        </div>
-    </div>
-
-    <div modal-item="rules" class="_container modals__item">
-        <div class="modals__title">Правила сервера</div>
-
-        <p class="modals__text">Какие то правила сервера</p>
-        <div modal-close class="modals__close">
-            <div class="modals__close-line"></div>
-            <div class="modals__close-line"></div>
-        </div>
-    </div>
-</div>
-
-<div id="popup" class="popup">
-    <div class="popup_body">
-        <div class="popup_content">
-            <a href="#" class="popup_close">X</a>
-            <div class="popup__tittle">Моделаьне вікно</div>
-            <div class="popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi, omnis. At debitis dolore earum eum magnam neque quae quos ut vel, vitae. Adipisci delectus eos illo quidem quisquam quod repellat similique. Debitis deleniti eum ex libero nihil placeat, sapiente.</div>
-        </div>
     </div>
 </div>
 
 
-<a href="#popup">HELLLLLLOOOOOOO!!!</a>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/18846f0aad.js" crossorigin="anonymous"></script>
+<script src="assets/scripts/popup.js"></script>
 <script src="assets/scripts/script.js"></script>
 <script src="./assets/scripts/main.js"></script>
 </body>
