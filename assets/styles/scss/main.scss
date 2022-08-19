@@ -52,7 +52,6 @@ body {
     font-family: 'Minecraft Rus', sans-serif;
     font-weight: 400;
     font-size: 14px;
-
     overflow-x: hidden;
 }
 
@@ -102,9 +101,10 @@ a, button {
     // max-width: 100vw;
 }
 
+
 .nav {
-    transition: background-color .3s ease;
-    background-color: #fff;
+    transition: background-color .6s ease;
+    background-color: #F5F8FF;
     padding: 23px 0;
     //position: fixed;
     //z-index: 100;
@@ -148,11 +148,23 @@ a, button {
 
         .nav__list {
             display: block;
+            @include max-screen(900px){
+                display: flex;
+                flex-direction: column;
+            }
 
             &-item {
                 margin-right: 0;
                 margin-bottom: 40px;
                 text-align: center;
+                @include max-screen(900px){
+                    background: #419EFC;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    color: white;
+                    margin-bottom: 20px;
+
+                }
             }
         }
 
@@ -190,6 +202,9 @@ a, button {
     }
     .nav__list {
         display: block;
+        @include max-screen(900px){
+            display: none;
+        }
 
         &-item {
             font-family: 'Montserrat 500', serif;
@@ -317,12 +332,9 @@ a, button {
     }
 }
 
-
-
-
-
 .main_banner {
     background: #F5F8FF;
+    transition: background-color .6s ease;
 
     .slider_item {
         border-radius: 54px;
@@ -346,6 +358,10 @@ a, button {
         letter-spacing: 0.025em;
         color: #FFFFFF;
         margin-bottom: 30px;
+        @include max-screen(450px){
+            font-size: 30px;
+            line-height: inherit;
+        }
     }
 
     p {
@@ -357,6 +373,10 @@ a, button {
         letter-spacing: -0.015em;
         color: #FFFFFF;
         margin-bottom: 30px;
+        @include max-screen(450px){
+            font-size: 16px;
+            line-height: inherit;
+        }
     }
 
     a {
@@ -383,6 +403,7 @@ a, button {
 .donate {
     background: #F5F8FF;
     padding: 0 0 50px 0;
+    transition: background-color .6s ease;
     ._container {
     }
     .donate__box {
@@ -583,6 +604,7 @@ a, button {
 .footer {
     padding: 50px 50px;
     background: radial-gradient(97.47% 5842.35% at 98.46% 91.73%, #222C35 0%, #0C263E 100%);
+    transition: background-color .6s ease;
     ._container{
         display: flex;
         justify-content: space-between;
@@ -604,6 +626,12 @@ a, button {
             font-family: 'Montserrat 500', serif;
             font-size: 20px;
             color: white;
+            @include max-screen(400px){
+                font-size: 14px;
+            }
+            @include max-screen(340px){
+                font-size: 12px;
+            }
         }
     }
     span{
@@ -1031,7 +1059,7 @@ a, button {
 }
 
 @media screen and (max-width: 900px) {
-    .nav__list, .nav__control-theme, .footer__list {
+     .nav__control-theme, .footer__list {
         display: none;
     }
 
@@ -1355,3 +1383,76 @@ a, button {
 //        }
 //    }
 //}
+
+
+//dark_theme
+.nav.dark{
+    background-color: #419EFC;
+}
+.main_banner.dark{
+    background-color: #419EFC;
+}
+.donate.dark{
+    background-color: #419EFC;
+}
+.footer.dark{
+    background-color: #419EFC;
+}
+
+
+
+
+
+
+
+.test{
+    margin-top: 100px;
+    background-color: black;
+}
+
+.disabled{
+    display: none;
+}
+.active{
+    display: block;
+}
+
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup_body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup_content{
+    background-color: white;
+    color: black;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+}
+
+.popup_close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+

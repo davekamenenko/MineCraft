@@ -61,8 +61,8 @@ a, button {
   overflow: hidden; }
 
 .nav {
-  transition: background-color .3s ease;
-  background-color: #fff;
+  transition: background-color .6s ease;
+  background-color: #F5F8FF;
   padding: 23px 0;
   width: 100%;
   top: 0;
@@ -95,10 +95,21 @@ a, button {
       justify-content: space-around; }
     .nav.active .nav__list {
       display: block; }
+      @media screen and (max-width: 900px) {
+        .nav.active .nav__list {
+          display: flex;
+          flex-direction: column; } }
       .nav.active .nav__list-item {
         margin-right: 0;
         margin-bottom: 40px;
         text-align: center; }
+        @media screen and (max-width: 900px) {
+          .nav.active .nav__list-item {
+            background: #419EFC;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 20px; } }
     .nav.active .nav__control-theme {
       display: flex; }
     .nav.active .nav__control-online {
@@ -120,6 +131,9 @@ a, button {
     max-width: 200px; }
   .nav .nav__list {
     display: block; }
+    @media screen and (max-width: 900px) {
+      .nav .nav__list {
+        display: none; } }
     .nav .nav__list-item {
       font-family: 'Montserrat 500', serif;
       font-style: normal;
@@ -213,7 +227,8 @@ a, button {
         bottom: 22%; }
 
 .main_banner {
-  background: #F5F8FF; }
+  background: #F5F8FF;
+  transition: background-color .6s ease; }
   .main_banner .slider_item {
     border-radius: 54px;
     overflow: hidden;
@@ -234,6 +249,10 @@ a, button {
     letter-spacing: 0.025em;
     color: #FFFFFF;
     margin-bottom: 30px; }
+    @media screen and (max-width: 450px) {
+      .main_banner h2 {
+        font-size: 30px;
+        line-height: inherit; } }
   .main_banner p {
     font-family: 'Montserrat 500', serif;
     font-style: normal;
@@ -243,6 +262,10 @@ a, button {
     letter-spacing: -0.015em;
     color: #FFFFFF;
     margin-bottom: 30px; }
+    @media screen and (max-width: 450px) {
+      .main_banner p {
+        font-size: 16px;
+        line-height: inherit; } }
   .main_banner a {
     font-family: 'Montserrat 700', serif;
     font-style: normal;
@@ -262,7 +285,8 @@ a, button {
 
 .donate {
   background: #F5F8FF;
-  padding: 0 0 50px 0; }
+  padding: 0 0 50px 0;
+  transition: background-color .6s ease; }
   .donate .donate__box {
     transition: background-color .3s ease;
     display: flex; }
@@ -406,7 +430,8 @@ a, button {
 
 .footer {
   padding: 50px 50px;
-  background: radial-gradient(97.47% 5842.35% at 98.46% 91.73%, #222C35 0%, #0C263E 100%); }
+  background: radial-gradient(97.47% 5842.35% at 98.46% 91.73%, #222C35 0%, #0C263E 100%);
+  transition: background-color .6s ease; }
   .footer ._container {
     display: flex;
     justify-content: space-between; }
@@ -425,6 +450,12 @@ a, button {
       font-family: 'Montserrat 500', serif;
       font-size: 20px;
       color: white; }
+      @media screen and (max-width: 400px) {
+        .footer ._container p {
+          font-size: 14px; } }
+      @media screen and (max-width: 340px) {
+        .footer ._container p {
+          font-size: 12px; } }
   .footer span {
     font-family: 'Montserrat 500', serif;
     color: white;
@@ -725,7 +756,7 @@ a, button {
         width: 70%; }
 
 @media screen and (max-width: 900px) {
-  .nav__list, .nav__control-theme, .footer__list {
+  .nav__control-theme, .footer__list {
     display: none; }
 
   .nav__control-burger {
@@ -799,5 +830,56 @@ a, button {
 
   .modals__cart {
     padding: 10px; } }
+.nav.dark {
+  background-color: #419EFC; }
+
+.main_banner.dark {
+  background-color: #419EFC; }
+
+.donate.dark {
+  background-color: #419EFC; }
+
+.footer.dark {
+  background-color: #419EFC; }
+
+.test {
+  margin-top: 100px;
+  background-color: black; }
+
+.disabled {
+  display: none; }
+
+.active {
+  display: block; }
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden; }
+
+.popup_body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px; }
+
+.popup_content {
+  background-color: white;
+  color: black;
+  max-width: 800px;
+  padding: 30px;
+  position: relative; }
+
+.popup_close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px; }
 
 /*# sourceMappingURL=main.css.map */

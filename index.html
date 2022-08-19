@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>donate</title>
     <link rel="stylesheet" href="assets/styles/scss/main.css">
+
 </head>
 <body>
 <div class="wrapper">
@@ -26,18 +27,21 @@
                     <div class="nav__control-online__info">
                         <p class="nav__control-online__hover">Натисніть, щоб скоюпіювати id серверу</p>
                         <p class="nav__control-online__ip">quickworld.fun</p>
-                        <p class="nav__control-online__status">Онлайн: <span id="server0" class="nav__control-online__checked">999</span>
+                        <p class="nav__control-online__status">Онлайн: <span id="server0"
+                                                                             class="nav__control-online__checked">999</span>
                         </p>
                     </div>
                 </div>
-                <div class="nav__control-item nav__control-theme" theme>
-                    <img src="./assets/images/icons/moon.svg" class="nav__control-theme__icon" alt="">
+                <div class="nav__control-item nav__control-theme theme">
+                    <img src="./assets/images/icons/moon.svg" class="nav__control-theme__icon moon" alt="">
+                    <img src="./assets/images/icons/sun.svg" class="nav__control-theme__icon sun disabled" alt="">
                 </div>
                 <div class="nav__control-item nav__control-burger">
                     <div class="nav__control-burger__line nav__control-burger__line1"></div>
                     <div class="nav__control-burger__line nav__control-burger__line2"></div>
                     <div class="nav__control-burger__line nav__control-burger__line3"></div>
                 </div>
+                <div class="test2"></div>
             </div>
         </div>
     </nav>
@@ -531,6 +535,21 @@
     </div>
 </div>
 
+<div id="popup" class="popup">
+    <div class="popup_body">
+        <div class="popup_content">
+            <a href="#" class="popup_close">X</a>
+            <div class="popup__tittle">Моделаьне вікно</div>
+            <div class="popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi, omnis. At debitis dolore earum eum magnam neque quae quos ut vel, vitae. Adipisci delectus eos illo quidem quisquam quod repellat similique. Debitis deleniti eum ex libero nihil placeat, sapiente.</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/18846f0aad.js" crossorigin="anonymous"></script>
+<script src="assets/scripts/script.js"></script>
 <script src="./assets/scripts/main.js"></script>
 </body>
 </html>
