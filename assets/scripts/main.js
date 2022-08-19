@@ -31,7 +31,7 @@
                 body.classList.add('theme-dark');
                 img.setAttribute('src', './assets/images/icons/sun.svg');
                 return;
-            } 
+            }
             localStorage.setItem("theme", "light");
             console.log(' [Темы] Включена светлая тема с операционной системы!');
         }
@@ -55,57 +55,57 @@
     });
 }
 
-// slider
-(function () {
-    const sliderBox = document.querySelector('.news__box');
-    const sliderItems = document.querySelectorAll('.news__box-item');
-
-    const sliderButtonLeft = document.querySelector('.news__control-left');
-    const sliderButtonRight = document.querySelector('.news__control-right');
-
-    const count = sliderItems.length - 1;
-    let index = 0;
-
-    let switchAccess = true;
-
-    sliderButtonLeft.addEventListener('click', () => {
-        if(index == 0) {
-            index = count + 1;
-        }
-        index--;
-        setSliderItem();
-        takeAccess();
-    });
-    
-    sliderButtonRight.addEventListener("click", () => {
-        if(index == count) {
-            index = 0 - 1;
-        }
-        index++;
-        setSliderItem();
-        takeAccess();
-    })
-    
-    function takeAccess() {
-        switchAccess = false;
-        setTimeout(() => {
-            switchAccess = true;
-        }, 5000);
-    }
-    
-    setInterval(() => {
-        if(switchAccess) {
-            if(index == count) {
-                index = 0 - 1;
-            }
-            setSliderItem(sliderItems[++index]);
-        }
-    }, 3000);
-    
-    function setSliderItem() {
-        sliderBox.style.left = -(index * (sliderItems[0].clientWidth + parseInt(window.getComputedStyle(sliderItems[0], true).marginRight))) + "px";
-    }
-});
+// // slider
+// (function () {
+//     const sliderBox = document.querySelector('.news__box');
+//     const sliderItems = document.querySelectorAll('.news__box-item');
+//
+//     const sliderButtonLeft = document.querySelector('.news__control-left');
+//     const sliderButtonRight = document.querySelector('.news__control-right');
+//
+//     const count = sliderItems.length - 1;
+//     let index = 0;
+//
+//     let switchAccess = true;
+//
+//     sliderButtonLeft.addEventListener('click', () => {
+//         if(index == 0) {
+//             index = count + 1;
+//         }
+//         index--;
+//         setSliderItem();
+//         takeAccess();
+//     });
+//
+//     sliderButtonRight.addEventListener("click", () => {
+//         if(index == count) {
+//             index = 0 - 1;
+//         }
+//         index++;
+//         setSliderItem();
+//         takeAccess();
+//     })
+//
+//     function takeAccess() {
+//         switchAccess = false;
+//         setTimeout(() => {
+//             switchAccess = true;
+//         }, 5000);
+//     }
+//
+//     setInterval(() => {
+//         if(switchAccess) {
+//             if(index == count) {
+//                 index = 0 - 1;
+//             }
+//             setSliderItem(sliderItems[++index]);
+//         }
+//     }, 3000);
+//
+//     function setSliderItem() {
+//         sliderBox.style.left = -(index * (sliderItems[0].clientWidth + parseInt(window.getComputedStyle(sliderItems[0], true).marginRight))) + "px";
+//     }
+// });
 
 
 // ip copy
@@ -118,23 +118,23 @@
         navigator.clipboard.writeText(ip)
             .then(() => {
                 console.log(` [!] Айпи ${ip} успешно скопирован!`)
-                itemHover.innerHTML = 'IP скопійовано';
+                itemHover.innerHTML = 'IP серверу скопійовано!';
                 itemHover.style.backgroundColor = "#4cb58f";
 
                 setTimeout(() => {
-                    itemHover.innerHTML = 'Нажмите, чтобы скопировать айпи';
+                    itemHover.innerHTML = 'Натисніть, щоб скоюпіювати id серверу';
                     itemHover.style.backgroundColor = "#000";
                 }, 10000);
             }).catch(err => {
-                console.log(` [x] Ошибка при скопировании айпи ${ip}. `, err);
-                itemHover.innerHTML = 'Произошла ошибка :(';
-                itemHover.style.backgroundColor = "#b54c4c";
+            console.log(` [x] Помилка при копіюванні IP ${ip}. `, err);
+            itemHover.innerHTML = 'Сталась помилка :(';
+            itemHover.style.backgroundColor = "#b54c4c";
 
-                setTimeout(() => {
-                    itemHover.innerHTML = 'Нажмите, чтобы скопировать айпи';
-                    itemHover.style.backgroundColor = "#000";
-                }, 10000);
-            });
+            setTimeout(() => {
+                itemHover.innerHTML = 'Натисніть, щоб скоюпіювати id серверу';
+                itemHover.style.backgroundColor = "#000";
+            }, 10000);
+        });
     });
 }
 

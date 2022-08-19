@@ -57,7 +57,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a, button {
@@ -430,9 +430,9 @@ a, button {
                 border-radius: 24px;
                 background-color: #DEEBFE;
 
-                    &:hover{
-                        color: white;
-                    }
+                &:hover{
+                    color: white;
+                }
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -624,7 +624,7 @@ a, button {
             margin-right: 10px;
         }
         img:last-of-type{
-           width: 100px;
+            width: 100px;
         }
 
     }
