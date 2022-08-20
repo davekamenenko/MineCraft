@@ -434,6 +434,7 @@ a, button {
                 font-size: 19px;
                 line-height: 23px;
                 color: #000000;
+                transition: 0.3s ease;
 
                 cursor: pointer;
                 padding: 22px 56px;
@@ -456,6 +457,9 @@ a, button {
                 }
                 &.active {
                     background-color: rgba(65, 158, 252, 0.5);
+                }
+                &.dark{
+                    color: white;
                 }
             }
         }
@@ -491,12 +495,11 @@ a, button {
 
     &-item {
         border-radius: 24px;
-        cursor: pointer;
         margin: 12px;
         padding: 14px 0 30px 0;
         background: rgba(65, 158, 252, 0.1);
         position: relative;
-        transition: box-shadow .9s ease;
+        transition: 0.3s ease;
         max-width: 260px;
         width: 100%;
     }
@@ -526,6 +529,7 @@ a, button {
         line-height: 28px;
         color: #000000c9;
         margin-bottom: 15px;
+        transition: 0.3s ease;
 
     }
 
@@ -533,11 +537,11 @@ a, button {
         font-family: 'Montserrat 700', serif;
         color: black;
         margin-bottom: 10px;
-        transition: margin-bottom .3s ease;
         font-style: normal;
         font-weight: bold;
         font-size: 24px;
         line-height: 24px;
+        transition: 0.3s ease;
 
     }
 
@@ -549,8 +553,10 @@ a, button {
         border-radius: 5px;
         padding: 7px 0;
         font-family: inherit;
-
-
+        transition: 0.3s ease;
+        &:hover{
+            opacity: 0.6;
+        }
     }
 
 
@@ -1102,6 +1108,20 @@ a, button {
 .donate__products-title.dark{
     color: white;
 }
+.donate__products-name.dark{
+    color: white;
+}
+.donate__products-price.dark{
+    color: white;
+}
+.donate__products-button.dark{
+    color: white;
+}
+
+.donate__products-item.dark{
+    background: rgba(92, 92, 92, 0.3);
+}
+
 
 
 

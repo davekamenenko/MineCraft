@@ -318,6 +318,7 @@ a, button {
         font-size: 19px;
         line-height: 23px;
         color: #000000;
+        transition: 0.3s ease;
         cursor: pointer;
         padding: 22px 56px;
         margin-bottom: 10px;
@@ -334,6 +335,8 @@ a, button {
           background: radial-gradient(96.48% 1501.08% at 1.76% 11.81%, #14A6FC 0%, #1477F8 100%); }
         .donate .donate__box .donate__sidebar-item.active {
           background-color: rgba(65, 158, 252, 0.5); }
+        .donate .donate__box .donate__sidebar-item.dark {
+          color: white; }
 
 .donate__products {
   width: 100%; }
@@ -357,12 +360,11 @@ a, button {
         animation: animateCart 5s ease-out; }
   .donate__products-item {
     border-radius: 24px;
-    cursor: pointer;
     margin: 12px;
     padding: 14px 0 30px 0;
     background: rgba(65, 158, 252, 0.1);
     position: relative;
-    transition: box-shadow .9s ease;
+    transition: 0.3s ease;
     max-width: 260px;
     width: 100%; }
   .donate__products-image {
@@ -386,22 +388,26 @@ a, button {
     font-size: 20px;
     line-height: 28px;
     color: #000000c9;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    transition: 0.3s ease; }
   .donate__products-price {
     font-family: 'Montserrat 700', serif;
     color: black;
     margin-bottom: 10px;
-    transition: margin-bottom .3s ease;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    line-height: 24px; }
+    line-height: 24px;
+    transition: 0.3s ease; }
   .donate__products-button {
     cursor: pointer;
     border: none;
     border-radius: 5px;
     padding: 7px 0;
-    font-family: inherit; }
+    font-family: inherit;
+    transition: 0.3s ease; }
+    .donate__products-button:hover {
+      opacity: 0.6; }
   .donate__products-description {
     display: none; }
   .donate__products-buy {
@@ -783,6 +789,18 @@ a, button {
 
 .donate__products-title.dark {
   color: white; }
+
+.donate__products-name.dark {
+  color: white; }
+
+.donate__products-price.dark {
+  color: white; }
+
+.donate__products-button.dark {
+  color: white; }
+
+.donate__products-item.dark {
+  background: rgba(92, 92, 92, 0.3); }
 
 .disabled {
   display: none; }
