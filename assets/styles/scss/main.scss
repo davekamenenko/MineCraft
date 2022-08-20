@@ -218,12 +218,10 @@ a, button {
                 height: 4px;
                 background-color: #419EFC;
                 border-radius:  0 5px 5px 0;
+
             }
             &:hover::before {
                 width: 100%;
-            }
-            &:hover {
-                color: #1b1b1b;
             }
             &:last-child {
                 margin-right: 0;
@@ -242,8 +240,10 @@ a, button {
         padding: 11px;
         color: #fff;
         cursor: pointer;
-        &:hover {
-            background-color: darkolivegreen;
+
+
+    &:hover {
+            background-color: #0f0f0f;
         }
         height: 47px;
     }
@@ -423,8 +423,9 @@ a, button {
                 @include max-screen(800px){
                     margin: 0;
                 }
-
-
+                &.dark{
+                    background: transparent;
+                }
             }
 
             &-item {
@@ -460,7 +461,12 @@ a, button {
                 }
                 &.dark{
                     color: white;
+                    background-color: rgba(98, 166, 127, 0.7);
+                    &:hover{
+                        background: rgba(98, 166, 127, 0.5);
+                    }
                 }
+
             }
         }
     }
@@ -502,6 +508,8 @@ a, button {
         transition: 0.3s ease;
         max-width: 260px;
         width: 100%;
+        cursor: pointer;
+
     }
 
     &-image {
@@ -567,7 +575,6 @@ a, button {
 
     &-buy {
         background-color: #419EFC;
-
         font-style: normal;
         font-weight: bold;
         font-size: 14px;
@@ -576,8 +583,11 @@ a, button {
         width: 100%;
         padding: 15px 0;
         margin: auto;
+        transition:background-color 0.3s ease;
+
         &:hover{
-            opacity: 0.7;
+            opacity: 0.8;
+
         }
 
     }
@@ -737,34 +747,6 @@ a, button {
         margin-bottom: 10px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1100,6 +1082,10 @@ a, button {
 }
 .nav__list-item.dark{
     color: white;
+    &:before{
+      background-color: rgba(98, 166, 127, 0.7);
+    }
+
 }
 .nav__logo.dark svg g{
     fill: white;
@@ -1119,11 +1105,16 @@ a, button {
 }
 
 .donate__products-item.dark{
-    background: rgba(92, 92, 92, 0.3);
+    background: rgba(92, 92, 92, 0.5);
 }
 
+.donate__products-buy.dark{
+    background: rgba(98, 166, 127, 0.7);
+}
 
-
+.theme.dark{
+    background-color: rgba(98, 166, 127, 0.5);
+}
 
 
 .disabled{
@@ -1132,3 +1123,4 @@ a, button {
 .active{
     display: block;
 }
+
