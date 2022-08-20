@@ -156,8 +156,6 @@ a, button {
         border-radius: 0 5px 5px 0; }
       .nav .nav__list-item:hover::before {
         width: 100%; }
-      .nav .nav__list-item:hover {
-        color: #1b1b1b; }
       .nav .nav__list-item:last-child {
         margin-right: 0; }
 
@@ -173,7 +171,7 @@ a, button {
     cursor: pointer;
     height: 47px; }
     .nav__control-item:hover {
-      background-color: darkolivegreen; }
+      background-color: #0f0f0f; }
   .nav__control-online {
     display: flex;
     margin-right: 10px;
@@ -311,6 +309,8 @@ a, button {
         @media screen and (max-width: 800px) {
           .donate .donate__box .donate__sidebar-header {
             margin: 0; } }
+        .donate .donate__box .donate__sidebar-header.dark {
+          background: transparent; }
       .donate .donate__box .donate__sidebar-item {
         font-family: 'Montserrat 600', serif;
         font-style: normal;
@@ -336,7 +336,10 @@ a, button {
         .donate .donate__box .donate__sidebar-item.active {
           background-color: rgba(65, 158, 252, 0.5); }
         .donate .donate__box .donate__sidebar-item.dark {
-          color: white; }
+          color: white;
+          background-color: rgba(98, 166, 127, 0.7); }
+          .donate .donate__box .donate__sidebar-item.dark:hover {
+            background: rgba(98, 166, 127, 0.5); }
 
 .donate__products {
   width: 100%; }
@@ -366,7 +369,8 @@ a, button {
     position: relative;
     transition: 0.3s ease;
     max-width: 260px;
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
   .donate__products-image {
     width: 224px;
     height: 224px;
@@ -419,9 +423,10 @@ a, button {
     color: #FFFFFF;
     width: 100%;
     padding: 15px 0;
-    margin: auto; }
+    margin: auto;
+    transition: background-color 0.3s ease; }
     .donate__products-buy:hover {
-      opacity: 0.7; }
+      opacity: 0.8; }
   .donate__products .product__item_info {
     max-width: 224px;
     margin: auto; }
@@ -800,12 +805,27 @@ a, button {
   color: white; }
 
 .donate__products-item.dark {
-  background: rgba(92, 92, 92, 0.3); }
+  background: rgba(92, 92, 92, 0.5); }
+
+.donate__products-buy.dark {
+  background: rgba(98, 166, 127, 0.7); }
+
+.theme.dark {
+  background-color: rgba(163, 163, 163, 0.8); }
 
 .disabled {
   display: none; }
 
 .active {
   display: block; }
+
+.test-2 {
+  animation: move 10s linear infinite;
+  background-image: linear-gradient(to right, #ff0000, #f702d7, #2302f7, #02f79e, #f7f302, #02f79e, #2302f7, #f702d7, #ff0000);
+  background-size: 700% auto; }
+
+@keyframes move {
+  to {
+    background-position: 200% center; } }
 
 /*# sourceMappingURL=main.css.map */
